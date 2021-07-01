@@ -3,14 +3,16 @@ using System;
 using AnimalShelterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AnimalShelterApi.Migrations
 {
     [DbContext(typeof(AnimalShelterApiContext))]
-    partial class AnimalShelterApiContextModelSnapshot : ModelSnapshot
+    [Migration("20210701225559_AddImageUrl")]
+    partial class AddImageUrl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,9 +35,6 @@ namespace AnimalShelterApi.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Name")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<string>("Species")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("AnimalId");
