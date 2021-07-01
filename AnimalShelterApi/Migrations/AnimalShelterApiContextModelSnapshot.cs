@@ -3,16 +3,14 @@ using System;
 using AnimalShelterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AnimalShelterApi.Migrations
 {
-    [DbContext(typeof(AnimalShelterContext))]
-    [Migration("20210701214228_Initial")]
-    partial class Initial
+    [DbContext(typeof(AnimalShelterApiContext))]
+    partial class AnimalShelterApiContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
