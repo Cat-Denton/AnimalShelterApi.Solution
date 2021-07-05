@@ -37,7 +37,6 @@ namespace AnimalShelterApi.Controllers
 
       return await query.ToListAsync();
     }
-    }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Animal>> GetAnimal(int id)
