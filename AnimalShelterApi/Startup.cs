@@ -28,7 +28,7 @@ namespace AnimalShelterApi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "swaggerTest", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AnimalShelterApi", Version = "v1" });
             });
         }
 
@@ -38,12 +38,12 @@ namespace AnimalShelterApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "swaggerTest v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AnimalShelterApi v1"));
 
             }
 
             app.UseHttpsRedirection();
-            
+
             app.UseRouting();
 
             app.UseAuthorization();
