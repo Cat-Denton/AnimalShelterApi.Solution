@@ -12,9 +12,18 @@
 * Razor
 * Entity Framework Core
 * Identity
-* MySql Workbench
+* Sql
+* Swagger
 
 ## Description
+
+#### _This API provides data about pets that are held at an animal shelter. The pets have the following properties: name, species, gender, date of birth, and a URL where a picture is stored in a cloud service such as imgur. The endpoint functionality written for the API may be seen on the Swagger page that launches when you run the API program. The following endpoints are available:_
+
+* Get http://localhost:5000/api/animals -this returns a json object with the entire list of animals. The user may also search the animals by appending this endpoint with ?species= or ?gender=
+* GetAnimal http://localhost:5000/api/animals/{id} -this returns a json object representing a single animal
+* Post http://localhost:5000/api/animals -this uses the provided json object to add a new animal entity to the server
+* Put http://localhost:5000/api/animals/{id} -this uses a provided json object to replace the data of a currently existing animal entity on the server
+* Delete http://localhost:5000/api/animals/{id} -this removes the animal entity with the provided id from the server
 
 __
 
@@ -30,14 +39,23 @@ __
 * Enter the following code into appsettings.json, change the password to your MySql server password and save
 ```
 {
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "AllowedHosts": "*",
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=cat_denton;uid=root;pwd=[yourPwHere];"
+    "DefaultConnection": "Server=localhost;Port=3306;database=cat_denton;uid=root;pwd=[YOUR-PASSWORD-HERE-WITHOUT-BRACKETS];"
   }
 }
 ```
 * Type "dotnet build" in terminal and hit enter
 * Type "dotnet ef database update"
 * Type "dotnet run" in the terminal and hit enter
+* The swagger page that provides endpoint documentation should launch in your browser
 
 ## Known Bugs
 
