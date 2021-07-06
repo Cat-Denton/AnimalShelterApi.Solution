@@ -25,17 +25,20 @@
 * Put http://localhost:5000/api/animals/{id} -this uses a provided json object to replace the data of a currently existing animal entity on the server
 * Delete http://localhost:5000/api/animals/{id} -this removes the animal entity with the provided id from the server
 
+The Swagger documentation can be used to test these endpoints and receive example Json bodies as well as the endpoing URLs to access the API data. Use the "Get" or "GetAnimal" endpoints on swagger to generate Json bodies, which can then be modified to test out the Put and Post endpoints.
+
 __
 
 
 ## Setup/Installation Requirements
 
 * Install microsoft .NET V5
+* Install MySQL
 * Clone repository to local drive
 * Open code with a text editor
 * Open terminal
-* Change directory to HairSalon.Solution/HairSalon
-* Type "dotnet touch appsettings.json"
+* Change directory to AnimalShelterApi.Solution/AnimalShelterApi
+* Type "touch appsettings.json"
 * Enter the following code into appsettings.json, change the password to your MySql server password and save
 ```
 {
@@ -55,7 +58,7 @@ __
 * Type "dotnet build" in terminal and hit enter
 * Type "dotnet ef database update"
 * Type "dotnet run" in the terminal and hit enter
-* The swagger page that provides endpoint documentation should launch in your browser
+* The swagger page that provides endpoint documentation should launch in your browser at http://localhost:5000/swagger/index.html
 
 ## Known Bugs
 
