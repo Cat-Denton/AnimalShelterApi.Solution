@@ -57,7 +57,7 @@ __
 ```
 * Type "dotnet build" in terminal and hit enter
 * Type "dotnet ef database update"
-* Type "dotnet run" in the terminal and hit enter
+* Type "dotnet watch run" in the terminal and hit enter
 * The swagger page that provides endpoint documentation should launch in your browser at http://localhost:5000/swagger/index.html
 
 ## Known Bugs
