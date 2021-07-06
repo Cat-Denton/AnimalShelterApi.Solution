@@ -42,8 +42,6 @@ namespace AnimalShelterApi
 
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();
